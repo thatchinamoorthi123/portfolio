@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const Skillsction = ({ skills }) => {
   return (
-    <section className="min-h-screen bg-[#0B0B0B] py-20">
+    <section className="min-h-screen bg-[#0B0B0B] py-20 cursor-default">
       {/* Heading */}
       <div className="container mx-auto flex justify-center items-center">
         <motion.h1
@@ -11,10 +11,10 @@ export const Skillsction = ({ skills }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-bold text-transparent pb-14 bg-gradient-to-r from-[#272626] to-[#C4C4C4] bg-clip-text text-center text-8xl"
+          className="font-bold text-transparent pb-14 bg-gradient-to-r from-[#272626] to-[#C4C4C4] bg-clip-text text-center text-8xl cursor-default select-none"
         >
           Skills
-          <span className="block text-xl text-[#C4C4C4] mt-2">
+          <span className="block text-xl text-[#C4C4C4] mt-2 cursor-default select-none">
             that Fuel my Passion
           </span>
         </motion.h1>
@@ -50,6 +50,7 @@ export const Skillsction = ({ skills }) => {
               duration-500
               hover:border-[#82b7ef]/40
               shadow-[0_0_20px_rgba(130,183,239,0.35)]
+              cursor-default
             "
           >
             {/* Hover Gradient Overlay */}
@@ -84,6 +85,7 @@ export const Skillsction = ({ skills }) => {
                     }}
                     className={`
                       p-5
+                      cursor-pointer
                       ${
                         Math.floor(idx / 4) % 2
                           ? "ml-12"
@@ -94,7 +96,7 @@ export const Skillsction = ({ skills }) => {
                     <img
                       src={icon}
                       alt={skill.name}
-                      className="w-[60%] transition-transform duration-300"
+                      className="w-[60%] transition-transform duration-300 pointer-events-none"
                     />
                   </motion.div>
                 ))}
@@ -110,7 +112,7 @@ export const Skillsction = ({ skills }) => {
                   duration: 0.5,
                   delay: index * 0.1,
                 }}
-                className="flex flex-wrap gap-2 items-center mb-5"
+                className="flex flex-wrap gap-2 items-center mb-5 cursor-default select-none"
               >
                 {skill.badge.map((con, ix) => (
                   <div
@@ -130,6 +132,8 @@ export const Skillsction = ({ skills }) => {
                       transition-all
                       duration-300
                       hover:border-[#82b7ef]/40
+                      cursor-default
+                      select-none
                     "
                   >
                     <div className="w-1.5 h-1.5 rounded-full bg-[#82b7ef]" />
@@ -150,16 +154,17 @@ export const Skillsction = ({ skills }) => {
                   transition-all
                   duration-300
                   group-hover:text-[#82b7ef]
+                  cursor-default
                 "
               >
                 {skill.name}
               </h2>
 
-              <h3 className="text-md font-semibold text-[#82b7ef] mb-3">
+              <h3 className="text-md font-semibold text-[#82b7ef] mb-3 cursor-default">
                 {skill.names}
               </h3>
 
-              <p className="text-[#C4C4C4] leading-relaxed">
+              <p className="text-[#C4C4C4] leading-relaxed cursor-text selection:bg-[#82b7ef]/30">
                 {skill.description}
               </p>
             </div>

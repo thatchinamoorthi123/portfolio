@@ -6,9 +6,9 @@ import { Navbar } from "./Navbar";
 import { motion } from "framer-motion";
 import Aboutme from "./component/Aboutme";
 import Contactme from "./component/Contactme";
-import { SkillsMarquee } from "./component/SkillsMarquee"
-import { Projector } from "lucide-react";
+import { SkillsMarquee } from "./component/SkillsMarquee";
 import Projects from "./component/Projects";
+import CursorParticles from "./component/CursorParticles";
 
 import reactIcon from "./assets/react.svg";
 import jsIcon from "./assets/js.svg";
@@ -34,212 +34,160 @@ import githubIcon from "./assets/github-bg.svg";
 import postmanIcon from "./assets/postman.svg";
 import figmaIcon from "./assets/figma.svg";
 
-// import email from "./assets/gmail-svgrepo-com.svg"
-
 export const App = () => {
   const array = [
-    "Java Script",
+    "React.js",
     "Svelte",
-    " React JS",
-    " Tailwind CSS",
-    "HTML & CSS ",
-    "Frontend Development",
-    "UI Design",
+    "SvelteKit",
+    "Java",
+    "Spring Boot",
+    "PostgreSQL",
+    "JavaScript (ES6+)",
+    "TypeScript",
+    "Tailwind CSS",
+    "Next.js",
+    "Server-Side Rendering (SSR)",
+    "SEO Optimization",
+    "Redux Toolkit",
+    "REST APIs",
+    "JWT Authentication",
+    "Role-Based Access Control (RBAC)",
+    "Hibernate",
+    "Spring Data JPA",
+    "Git & GitHub",
+    "Postman",
     "Figma",
-    "Adobe XD",
-    "GitHub",
-    "VS Code",
-    "Web Animation",
-    "Framer Motion",
-    "GSAP",
-    "Responsive Design",
-    "Cross-Browser Compatibility",
-    "Performance Optimization",
-    "SEO Basics",
-    "Agile Methodologies",
-    "Problem Solving",
-    "Communication Skills",
-    "Team Collaboration",
-    "Continuous Learning",
+    "Agile Development",
+    "Node.js",
   ];
 
   const skills = [
-  {
-    name: "Frontend Development",
-    names: "React.js, Svelte, JavaScript, TypeScript, HTML5",
-    icons: [
-      reactIcon,
-      jsIcon,
-      htmlIcon,
-      svelteIcon,
-      tsIcon,
-    ],
-    description:
-      "Building modern, responsive, and high-performance user interfaces using contemporary frontend frameworks and web technologies.",
-  },
+    {
+      name: "Frontend Development",
+      names: "React.js, Svelte, SvelteKit, Next.js, JavaScript (ES6+), TypeScript, HTML5",
+      icons: [reactIcon, svelteIcon, jsIcon, tsIcon, htmlIcon],
+      description:
+        "Building modern, responsive, and high-performance user interfaces and SSR web applications using React, SvelteKit, and standard web technologies.",
+    },
 
-  {
-    name: "UI Styling & Design",
-    names: "CSS3, Tailwind CSS, Sass, Bootstrap",
-    icons: [
-      cssIcon,
-      tailwindIcon,
-      sassIcon,
-      bootstrapIcon,
-    ],
-    description:
-      "Creating visually appealing, responsive, and accessible user experiences with modern styling frameworks and design practices.",
-  },
+    {
+      name: "UI Styling & Design",
+      names: "Tailwind CSS, CSS3, Responsive Design, Sass, Figma, Bootstrap",
+      icons: [tailwindIcon, cssIcon, sassIcon, bootstrapIcon, figmaIcon],
+      description:
+        "Translating Figma design systems into pixel-perfect responsive layouts with 95%+ accuracy, custom animations, and reusable component libraries.",
+    },
 
-  {
-    name: "Programming Languages",
-    names: "Java, Python, SQL",
-    icons: [
-      javaIcon,
-      pythonIcon,
-      sqlIcon,
-    ],
-    description:
-      "Applying strong programming fundamentals, problem-solving skills, and database concepts to develop efficient and scalable solutions.",
-  },
+    {
+      name: "Backend & Server-Side",
+      names: "Java, Spring Boot, Node.js, REST APIs, Axios, Fetch API",
+      icons: [javaIcon, nodeIcon, postmanIcon],
+      description:
+        "Architecting clean RESTful services, handling business workflows, implementing authentication endpoints, and integrating frontends with backend APIs.",
+    },
 
-  {
-    name: "Backend & Databases",
-    names: "Node.js, PostgreSQL, JSON",
-    icons: [
-      nodeIcon,
-      postgresIcon,
-      jsonIcon,
-    ],
-    description:
-      "Developing server-side applications, managing databases, and building reliable APIs for full-stack web applications.",
-  },
+    {
+      name: "Database & State Management",
+      names: "PostgreSQL, SQL, JSON, Redux, Redux Toolkit, Svelte Stores, LocalStorage",
+      icons: [postgresIcon, sqlIcon, jsonIcon],
+      description:
+        "Relational database modeling with PostgreSQL, entity relationships, query execution, and predictable client state management via Redux Toolkit and Svelte Stores.",
+    },
 
-  {
-    name: "Development Tools",
-    names: "Git, GitHub, Postman, Figma",
-    icons: [
-      gitIcon,
-      githubIcon,
-      postmanIcon,
-      figmaIcon,
-    ],
-    description:
-      "Utilizing industry-standard tools for version control, API testing, collaboration, and UI/UX design workflows.",
-  },
+    {
+      name: "SSR & Modern Web Architecture",
+      badge: [
+        "Server-Side Rendering (SSR)",
+        "SvelteKit SSR",
+        "SEO (+35% Boost)",
+        "Dynamic Updates",
+        "Zero-Downtime APIs",
+        "Cross-Page Reusability",
+      ],
+      description:
+        "Solo developer who implemented Server-Side Rendering (SSR) and Search Engine Optimization (SEO) in the organization, elevating search visibility by 35%.",
+    },
 
-  {
-    name: "Core Concepts",
-    badge: [
-      "Redux Toolkit",
-      "React Hooks",
-      "State Management",
-      "REST APIs",
-      "Authentication",
-      "Authorization",
-      "Testing & Debugging",
-      "Version Control",
-      "Responsive Design",
-      "Web Performance Optimization",
-    ],
-    description:
-      "Strong understanding of modern frontend architecture, application state management, API integration, security, testing, and performance optimization.",
-  },
-];
+    {
+      name: "Tools, Security & Architecture",
+      badge: [
+        "JWT Authentication",
+        "Role-Based Access (RBAC)",
+        "Spring Data JPA",
+        "Hibernate",
+        "Git & CI/CD",
+        "Agile Development",
+        "Dev Servers (RDC)",
+        "100+ Bug Fixes",
+      ],
+      description:
+        "Enterprise-grade security using JWT & granular RBAC permissions, robust data persistence with Hibernate and JPA, and collaborative Agile CI/CD workflows.",
+    },
+  ];
+
   return (
-<div className="relative min-h-screen bg-[#D7D7D7]">
-  {/* Navbar */}
-  <div className="lg:block hidden fixed top-0 right-0 w-[55%] z-[999]">
-    <Navbar />
-  </div>
+    <div className="relative min-h-screen bg-[#D7D7D7] cursor-default">
+      {/* Interactive Cursor Particle Animation */}
+      <CursorParticles />
 
-  {/* Hero */}
-  <section id="home">
-    <Herosection />
-  </section>
+      {/* Navbar */}
+      <div className="lg:block hidden fixed top-0 right-0 w-[55%] z-[999]">
+        <Navbar />
+      </div>
 
-  {/* Skills */}
-  <section id="skills">
-    <SkillsMarquee array={array} />
-    <Skillsction skills={skills} />
-  </section>
+      {/* Hero */}
+      <section id="home">
+        <Herosection />
+      </section>
 
-  {/* Projects */}
-  <section
-    id="projects"
-    className="min-h-screen bg-[#C4C4C4] py-20 overflow-hidden"
-  >
-    <motion.h1
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="text-8xl text-center font-bold bg-gradient-to-r from-[#0b0b0b] to-[#c4c4c4] text-transparent bg-clip-text"
-    >
-      Projects
-      <span className="block text-xl text-[#0B0B0B] mt-2">
-        See What I Developed
-      </span>
-    </motion.h1>
+      {/* Skills */}
+      <section id="skills">
+        <SkillsMarquee array={array} />
+        <Skillsction skills={skills} />
+      </section>
 
-    {/* Project Cards */}
-    {/* <div id="projects" className="container mx-auto mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-      {[1, 2, 3].map((item) => (
-        <motion.div
-          key={item}
-          whileHover={{ y: -10, scale: 1.02 }}
-          className="
-            bg-[#D7D7D7]
-            rounded-3xl
-            overflow-hidden
-            border border-[#b5b5b5]
-            shadow-lg
-            hover:shadow-[0_0_40px_rgba(11,11,11,0.15)]
-            transition-all
-            duration-500
-          "
-        >
-          <div className="h-52 bg-[#0B0B0B]" />
+      {/* Projects */}
+      <section
+        id="projects"
+        className="min-h-screen bg-[#C4C4C4] py-16 md:py-24 overflow-hidden relative cursor-default"
+      >
+        {/* Subtle Background Watermark */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden select-none">
+          <span className="text-[5rem] md:text-[10rem] font-black text-[#0b0b0b]/5 select-none whitespace-nowrap">
+            PROJECTS
+          </span>
+        </div>
 
-          <div className="p-6">
-            <h3 className="text-2xl font-bold mb-3">
-              Project Name
-            </h3>
+        <div className="container mx-auto px-4 mb-10 text-center relative z-10 cursor-default select-none">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-black text-[#0B0B0B] tracking-tight cursor-default select-none">
+              Projects
+            </h2>
+            <span className="block text-xs md:text-sm font-medium text-[#4b4b4b] mt-2 cursor-default select-none">
+              See What I Developed
+            </span>
+          </motion.div>
+        </div>
 
-            <p className="text-gray-700">
-              Modern web application built using React,
-              Tailwind CSS and Framer Motion.
-            </p>
+        <div className="relative z-10">
+          <Projects />
+        </div>
+      </section>
 
-            <button
-              className="
-                mt-5
-                bg-[#0B0B0B]
-                text-white
-                px-5
-                py-2
-                rounded-xl
-                hover:scale-105
-                transition-all
-              "
-            >
-              View Project
-            </button>
-          </div>
-        </motion.div>
-      ))}
-    </div> */}
-    <Projects></Projects>
-  </section>
+      {/* About */}
+      <section id="about">
+        <Aboutme />
+      </section>
 
-  {/* About */}
-  <section id="about">
-    <Aboutme />
-  </section>
-
-  {/* Contact */}
-  <section id="contact">
-    <Contactme />
-  </section>
-</div>
+      {/* Contact */}
+      <section id="contact">
+        <Contactme />
+      </section>
+    </div>
   );
 };

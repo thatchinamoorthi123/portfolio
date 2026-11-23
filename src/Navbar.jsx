@@ -21,6 +21,8 @@ export const Navbar = () => {
         px-8
         z-50
         shadow-lg
+        cursor-default
+        select-none
         [clip-path:polygon(25%_0%,100%_0%,100%_100%,30%_100%)]
       "
     >
@@ -46,6 +48,7 @@ export const Navbar = () => {
               transition-all
               duration-300
               hover:text-[#82b7ef]
+              cursor-pointer
               group
             "
           >

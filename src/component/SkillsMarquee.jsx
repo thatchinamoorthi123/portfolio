@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 export const SkillsMarquee = ({ array }) => {
   return (
-    <div className="relative bg-[#0B0B0B] overflow-hidden py-8">
-      <div className="absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-[#0B0B0B] to-transparent" />
-      <div className="absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-[#0B0B0B] to-transparent" />
+    <div className="relative bg-[#0B0B0B] overflow-hidden py-8 cursor-default select-none">
+      <div className="absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-[#0B0B0B] to-transparent pointer-events-none" />
+      <div className="absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-[#0B0B0B] to-transparent pointer-events-none" />
 
       <div className="flex overflow-hidden">
         <div className="flex min-w-full shrink-0 animate-marquee items-center gap-6 px-6">
@@ -13,7 +13,7 @@ export const SkillsMarquee = ({ array }) => {
             <motion.div
               key={index}
               whileHover={{ scale: 1.08, y: -3 }}
-              className="group flex items-center gap-3 rounded-full border border-[#222] bg-[#141414] px-5 py-2"
+              className="group flex items-center gap-3 rounded-full border border-[#222] bg-[#141414] px-5 py-2 cursor-default select-none"
             >
               <div className="w-2 h-2 rounded-full bg-[#82b7ef]" />
               <p className="whitespace-nowrap text-sm text-[#C4C4C4]">
@@ -31,7 +31,7 @@ export const SkillsMarquee = ({ array }) => {
             <motion.div
               key={index}
               whileHover={{ scale: 1.08, y: -3 }}
-              className="group flex items-center gap-3 rounded-full border border-[#222] bg-[#141414] px-5 py-2"
+              className="group flex items-center gap-3 rounded-full border border-[#222] bg-[#141414] px-5 py-2 cursor-default select-none"
             >
               <div className="w-2 h-2 rounded-full bg-[#82b7ef]" />
               <p className="whitespace-nowrap text-sm text-[#C4C4C4]">

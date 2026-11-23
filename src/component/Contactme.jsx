@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, ArrowRight } from "lucide-react";
+import self from "../assets/self2.png";
+import github from "../assets/github.svg";
+import linkedin from "../assets/linkedin.svg"
 
 export default function ContactMe() {
   return (
@@ -103,7 +106,7 @@ export default function ContactMe() {
               "
               >
                 <img
-                  src="/assets/self2.png"
+                  src={self}
                   alt="Frontend Developer Profile"
                   className="w-full h-full object-cover"
                 />
@@ -201,7 +204,7 @@ export default function ContactMe() {
                 className="bg-white/30 p-4 rounded-2xl hover:-translate-y-1 transition shadow-lg"
               >
                 <img
-                  src="/assets/linkedin.svg"
+                  src={linkedin}
                   alt="LinkedIn"
                   className="w-6 h-6 sm:w-7 sm:h-7"
                 />
@@ -214,7 +217,7 @@ export default function ContactMe() {
                 className="bg-white/30 p-4 rounded-2xl hover:-translate-y-1 transition shadow-lg"
               >
                 <img
-                  src="/assets/github.svg"
+                  src={github}
                   alt="GitHub"
                   className="w-6 h-6 sm:w-7 sm:h-7"
                 />

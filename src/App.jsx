@@ -10,6 +10,30 @@ import { SkillsMarquee } from "./component/SkillsMarquee"
 import { Projector } from "lucide-react";
 import Projects from "./component/Projects";
 
+import reactIcon from "./assets/react.svg";
+import jsIcon from "./assets/js.svg";
+import htmlIcon from "./assets/HTML.svg";
+import svelteIcon from "./assets/svelte.svg";
+import tsIcon from "./assets/ts.svg";
+
+import cssIcon from "./assets/css.svg";
+import tailwindIcon from "./assets/tailwind.svg";
+import sassIcon from "./assets/sass.svg";
+import bootstrapIcon from "./assets/bootstarp.svg";
+
+import javaIcon from "./assets/java.svg";
+import pythonIcon from "./assets/python.svg";
+import sqlIcon from "./assets/sql.svg";
+
+import nodeIcon from "./assets/node.svg";
+import postgresIcon from "./assets/postgress.svg";
+import jsonIcon from "./assets/json.svg";
+
+import gitIcon from "./assets/git.svg";
+import githubIcon from "./assets/github-bg.svg";
+import postmanIcon from "./assets/postman.svg";
+import figmaIcon from "./assets/figma.svg";
+
 // import email from "./assets/gmail-svgrepo-com.svg"
 
 export const App = () => {
@@ -40,80 +64,88 @@ export const App = () => {
   ];
 
   const skills = [
-    {
-      name: "Frontend Development",
-      names: "React.js, Svelte, JavaScript, TypeScript, HTML5",
-      icons: [
-        "/assets/react.svg",
-        "/assets/js.svg",
-        "/assets/HTML.svg",
-        "/assets/svelte.svg",
-        "/assets/ts.svg",
-      ],
-      description:
-        "Building modern, responsive, and high-performance user interfaces using contemporary frontend frameworks and web technologies.",
-    },
+  {
+    name: "Frontend Development",
+    names: "React.js, Svelte, JavaScript, TypeScript, HTML5",
+    icons: [
+      reactIcon,
+      jsIcon,
+      htmlIcon,
+      svelteIcon,
+      tsIcon,
+    ],
+    description:
+      "Building modern, responsive, and high-performance user interfaces using contemporary frontend frameworks and web technologies.",
+  },
 
-    {
-      name: "UI Styling & Design",
-      names: "CSS3, Tailwind CSS, Sass, Bootstrap",
-      icons: [
-        "/assets/css.svg",
-        "/assets/tailwind.svg",
-        "/assets/sass.svg",
-        "/assets/bootstarp.svg",
-      ],
-      description:
-        "Creating visually appealing, responsive, and accessible user experiences with modern styling frameworks and design practices.",
-    },
+  {
+    name: "UI Styling & Design",
+    names: "CSS3, Tailwind CSS, Sass, Bootstrap",
+    icons: [
+      cssIcon,
+      tailwindIcon,
+      sassIcon,
+      bootstrapIcon,
+    ],
+    description:
+      "Creating visually appealing, responsive, and accessible user experiences with modern styling frameworks and design practices.",
+  },
 
-    {
-      name: "Programming Languages",
-      names: "Java, Python, SQL",
-      icons: ["/assets/java.svg", "/assets/python.svg", "/assets/sql.svg"],
-      description:
-        "Applying strong programming fundamentals, problem-solving skills, and database concepts to develop efficient and scalable solutions.",
-    },
+  {
+    name: "Programming Languages",
+    names: "Java, Python, SQL",
+    icons: [
+      javaIcon,
+      pythonIcon,
+      sqlIcon,
+    ],
+    description:
+      "Applying strong programming fundamentals, problem-solving skills, and database concepts to develop efficient and scalable solutions.",
+  },
 
-    {
-      name: "Backend & Databases",
-      names: "Node.js, PostgreSQL, JSON",
-      icons: ["/assets/node.svg", "/assets/postgress.svg", "/assets/json.svg"],
-      description:
-        "Developing server-side applications, managing databases, and building reliable APIs for full-stack web applications.",
-    },
+  {
+    name: "Backend & Databases",
+    names: "Node.js, PostgreSQL, JSON",
+    icons: [
+      nodeIcon,
+      postgresIcon,
+      jsonIcon,
+    ],
+    description:
+      "Developing server-side applications, managing databases, and building reliable APIs for full-stack web applications.",
+  },
 
-    {
-      name: "Development Tools",
-      names: "Git, GitHub, Postman, Figma",
-      icons: [
-        "/assets/git.svg",
-        "/assets/github-bg.svg",
-        "/assets/postman.svg",
-        "/assets/figma.svg",
-      ],
-      description:
-        "Utilizing industry-standard tools for version control, API testing, collaboration, and UI/UX design workflows.",
-    },
+  {
+    name: "Development Tools",
+    names: "Git, GitHub, Postman, Figma",
+    icons: [
+      gitIcon,
+      githubIcon,
+      postmanIcon,
+      figmaIcon,
+    ],
+    description:
+      "Utilizing industry-standard tools for version control, API testing, collaboration, and UI/UX design workflows.",
+  },
 
-    {
-      name: "Core Concepts",
-      badge: [
-        "Redux Toolkit",
-        "React Hooks",
-        "State Management",
-        "REST APIs",
-        "Authentication",
-        "Authorization",
-        "Testing & Debugging",
-        "Version Control",
-        "Responsive Design",
-        "Web Performance Optimization",
-      ],
-      description:
-        "Strong understanding of modern frontend architecture, application state management, API integration, security, testing, and performance optimization.",
-    },
-  ];
+  {
+    name: "Core Concepts",
+    badge: [
+      "Redux Toolkit",
+      "React Hooks",
+      "State Management",
+      "REST APIs",
+      "Authentication",
+      "Authorization",
+      "Testing & Debugging",
+      "Version Control",
+      "Responsive Design",
+      "Web Performance Optimization",
+    ],
+    description:
+      "Strong understanding of modern frontend architecture, application state management, API integration, security, testing, and performance optimization.",
+  },
+];
   return (
 <div className="relative min-h-screen bg-[#D7D7D7]">
   {/* Navbar */}

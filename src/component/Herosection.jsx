@@ -1,5 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import email from "../assets/email.svg"
+import self from "../assets/self2.png";
+import github from "../assets/github.svg";
+import linkedin from "../assets/linkedin.svg"
+
 
 export const Herosection = () => {
   const firstName = "THATCHINAMOORTHI";
@@ -181,7 +186,7 @@ export const Herosection = () => {
                 "
               >
                 <img
-                  src="/portfolio/email.svg"
+                  src={email}
                   alt="Email"
                   className="w-6 h-6"
                 />
@@ -201,7 +206,7 @@ export const Herosection = () => {
                 "
               >
                 <img
-                  src="/portfolio/github.svg"
+                  src={github}
                   alt="GitHub"
                   className="w-6 h-6"
                 />
@@ -221,7 +226,7 @@ export const Herosection = () => {
                 "
               >
                 <img
-                  src="/portfolio/linkedin.svg"
+                  src={linkedin}
                   alt="LinkedIn"
                   className="w-6 h-6"
                 />
@@ -307,7 +312,7 @@ export const Herosection = () => {
           {/* Image */}
 
           <motion.img
-            src="/portfolio/self2.png"
+            src={self}
             alt="Profile"
             animate={{
               y: [0, -15, 0],
@@ -430,7 +435,7 @@ export const Herosection = () => {
           duration: 4,
           repeat: Infinity,
         }}
-        src="/portfolio/self2.png"
+        src={self}
         alt="Profile"
         className="
           w-72
@@ -579,7 +584,7 @@ export const Herosection = () => {
         "
       >
         <img
-          src="/portfolio/email.svg"
+          src={email}
           alt="Email"
           className="w-6 h-6"
         />
@@ -598,7 +603,7 @@ export const Herosection = () => {
         "
       >
         <img
-          src="/portfolio/github.svg"
+          src={github}
           alt="GitHub"
           className="w-6 h-6"
         />
@@ -617,7 +622,7 @@ export const Herosection = () => {
         "
       >
         <img
-          src="/portfolio/linkedin.svg"
+          src={linkedin}
           alt="LinkedIn"
           className="w-6 h-6"
         />
